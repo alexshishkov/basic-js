@@ -20,8 +20,6 @@ function countCats( matrix ) {
        if (matrix[i].includes('^^') == true) {
         res = res + 1
       }
-      console.log(matrix[i].includes('^^'))
-      
   }
   return res
 }
