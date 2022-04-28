@@ -24,7 +24,7 @@ for (let i = 0; i < members.length; i++) {
 
   arr = arr.sort()
       for (let j = 0; j < arr.length; j++) {
-          res = res + arr[j].charAt(0) 
+          res = res + arr[j].charAt(0).toUpperCase()
 }
 return res
 }
