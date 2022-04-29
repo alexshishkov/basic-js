@@ -17,13 +17,13 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-function dateSample(sampleActivity) {
-    let res;
-if (isNaN(sampleActivity) === true) {
-    return false
+ function dateSample(sampleActivity) {
+  let res;
+if( +sampleActivity != 'number') {
+  return false
 } else res = (Math.log(MODERN_ACTIVITY / sampleActivity))/(0.693/HALF_LIFE_PERIOD)
- let result = Math.ceil(res )
- return result
+let result = Math.ceil(res )
+return result
 }
 
 module.exports = {
