@@ -18,10 +18,9 @@ function createDreamTeam( members ) {
   let res =''
 for (let i = 0; i < members.length; i++) {
       if (typeof(members[i]) === 'string') {
-          arr.push(members[i])
+          arr.push(members[i].trim())
       }
   }
-
   arr = arr.sort()
       for (let j = 0; j < arr.length; j++) {
           res = res + arr[j].charAt(0).toUpperCase()
