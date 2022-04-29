@@ -22,7 +22,9 @@ const HALF_LIFE_PERIOD = 5730;
   if (typeof(sampleActivity) == 'string' && (+sampleActivity > 0) ) {
 res = (Math.log(MODERN_ACTIVITY / sampleActivity))/(0.693/HALF_LIFE_PERIOD)
 let result = Math.ceil(res)
-return result
+if (result < 0) {
+  return false
+} else return result
   }
   else return false
 }
