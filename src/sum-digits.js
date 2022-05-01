@@ -19,6 +19,9 @@ function getSumOfDigits( n ) {
   .reduce(function (a, b) {
       return a + b;
   }, 0);
+  if(res > 9) {
+    res = getSumOfDigits(res)
+  }
   return res
 }
 
