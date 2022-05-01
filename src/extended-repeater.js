@@ -25,13 +25,23 @@ if (options.additionSeparator === undefined) {
 if (options.additionRepeatTimes === undefined) {
     options.additionRepeatTimes = 1;
 }
-let arr =[]
+let arr = []
+let arrAddation = []
+for (let i = 0; i < options.additionRepeatTimes; i++) {
+  arrAddation.push(options.addition)
+}
+let additionStr = arrAddation.join(options.additionSeparator)
+
 for (let i = 0; i < options.repeatTimes; i++) {
-  arr.push(str + ((options.addition + options.additionSeparator).repeat(options.additionRepeatTimes) ))  
+  arr.push(str + additionStr)
 }
 let res = arr.join().replace(/[\s.,%]/g, options.separator)
 return res
 }
+
+
+console.log(repeater( 'STRING', { repeatTimes: 3, separator: '**', 
+addition: 'PLUS', additionRepeatTimes: 3, additionSeparator: '00' } ))
 
 module.exports = {
   repeater
